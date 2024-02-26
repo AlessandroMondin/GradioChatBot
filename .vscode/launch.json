@@ -1,0 +1,29 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "FastAPI",
+            "type": "python",
+            "request": "launch",
+            "module": "uvicorn",
+            "cwd": "${workspaceFolder}/src/",
+            "purpose": ["debug-in-terminal"],
+            "args": [
+                "app:app", 
+                "--reload",
+                "--port=8000"
+            ],
+            "jinja": true,
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Debug Interface",
+            "type": "python",
+            "request": "launch",
+            // "cwd": "${workspaceFolder}/src/consumer/",
+            "purpose": ["debug-in-terminal"],
+            "program": "${workspaceFolder}/src/interface.py",
+            "console": "integratedTerminal",
+        }
+    ]
+}

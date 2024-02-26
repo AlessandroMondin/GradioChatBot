@@ -1,0 +1,6 @@
+.vscode/*
+.venv/*
+flagged/*
+**/__pycache__/**
+.env
+setup.cfg
