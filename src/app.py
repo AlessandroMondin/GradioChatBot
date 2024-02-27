@@ -1,4 +1,3 @@
-import os
 from typing import List, Union
 from fastapi import FastAPI, WebSocket
 from pydantic import BaseModel
@@ -50,10 +49,9 @@ async def websocket_endpoint(websocket: WebSocket):
                 history_langchain_format.append(HumanMessage(content=human))
                 history_langchain_format.append(AIMessage(content=ai))
             history_langchain_format.append(HumanMessage(content=message))
-            gpt_response = llm(history_langchain_format).content
-
-            # Send back the response to the client
-            await manager.send_personal_message(gpt_response, websocket)
+            for chuck in llm.stream(history_langchain_format):
+                await manager.send_personal_message(chuck.content, websocket)
+            await manager.send_personal_message("<generation_completed>", websocket)
     except Exception as e:
         print(f"Error: {e}")
     finally:
