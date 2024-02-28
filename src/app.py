@@ -1,6 +1,5 @@
-from typing import List, Union
+from typing import List
 from fastapi import FastAPI, WebSocket
-from pydantic import BaseModel
 from dotenv import load_dotenv
 from langchain.chat_models import ChatOpenAI
 from langchain.schema import AIMessage, HumanMessage
@@ -9,11 +8,6 @@ load_dotenv()
 
 app = FastAPI()
 llm = ChatOpenAI(temperature=1.0, model="gpt-3.5-turbo-0613", streaming=True)
-
-
-class RequestData(BaseModel):
-    message: str
-    history: Union[List[List], List]
 
 
 class ConnectionManager:

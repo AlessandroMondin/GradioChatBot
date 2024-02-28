@@ -45,4 +45,4 @@ if __name__ == "__main__":
     # initilise chatstorage object used to store previous messages.
     chat = ChatStorage()
     app = gr.ChatInterface(fn=chat.send_and_receive_messages)
-    app.launch()
+    app.launch(share=True)
