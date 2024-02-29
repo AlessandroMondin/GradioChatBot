@@ -8,7 +8,7 @@ _Both client and server side are implemented with python._
 
 ### Clone and setup:
 
-            git clone https://github.com/AlessandroMondin/gradio_chatbot.git
+            git clone https://github.com/AlessandroMondin/gradio_chatbot.git && cd gradio_chatbot
             python3.10 -m venv .venv
             source .venv/bin/activate
 
