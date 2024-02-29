@@ -4,8 +4,6 @@ The purpose of this repo is to show how to implement a minimal chatbot using the
 technologies used for client-server communication: POST requests, Server-Sent-Events and Websockets. If you are using **VSCode**, you can use the `.vscode/launch.json` to debug and check the differences between the implementations.
 _Both client and server side are implemented with python._
 
-<br>
-
 ### Clone and setup:
 
             git clone https://github.com/AlessandroMondin/gradio_chatbot.git && cd gradio_chatbot
