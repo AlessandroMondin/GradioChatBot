@@ -13,6 +13,10 @@ _Both client and server side are implemented with python._
             source .venv/bin/activate
             pip install -r requirements.txt
 
+### Add an `.env` file in the source directory and insert your OPENAI key:
+
+        OPENAI_API_KEY=YOUR_OPENAI_KEY
+
 ### The two files that you want to check are `src/interface.py` and `src/app.py`.
 
 <br>
